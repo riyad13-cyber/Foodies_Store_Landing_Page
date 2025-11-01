@@ -17,6 +17,8 @@
   --font-black: black;
   --border-color: #b6b0b0;
   --benefit-bg-color: #e0f7ef;
+  --sec-btn-color: #dae6e0;
+  --btn-hover-color: #05a663;
   --font-family: inter, sans-serif;
   --font-size: 16px;
 }
@@ -44,8 +46,13 @@ button {
   transition: background-color 0.3s ease;
 }
 
+button:hover {
+  background-color: #05a564;
+}
+
 /* main section styling here */
-main {
+main,
+footer {
   flex: 1;
   width: 95%;
   max-width: 1200px;
@@ -115,8 +122,12 @@ header {
   flex-direction: row;
   gap: 50px;
   margin-top: 100px;
-
   align-items: center;
+  transition: all 0.3s ease;
+}
+
+.hero__left__spnsor img {
+  transition: all 0.3s ease;
 }
 
 .hero__right {
@@ -305,4 +316,262 @@ header {
   font-size: 0.9rem;
   font-weight: 400;
   color: var(--font-color);
+}
+
+/* our feature section sytling here + our product (some sector) */
+
+.our__feature,
+.our__product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 90px 0;
+}
+.our__product {
+  align-items: start;
+  width: 100%;
+}
+
+.our__feature p,
+.our__product p {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.our__feature h3,
+.our__product h3,
+.veggie__food h3 {
+  font-size: 3.75rem;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+
+.feture__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.feture__grid .image img {
+  transition: all 0.3s ease;
+}
+
+.image,
+.image__des {
+  flex: 0.25;
+  height: 250px;
+  border: 1px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image__des {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  gap: 15px;
+  background-color: var(--benefit-bg-color);
+}
+
+.image__des h4 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--font-color);
+}
+
+.image__des button {
+  background-color: var(--sec-btn-color);
+  color: var(--primary-color);
+  padding: 8px 12px;
+}
+
+.image__des button i,
+.pro__btn i {
+  margin-left: 8px;
+}
+
+/* our product sytling here */
+.product__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.product__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--border-color);
+  padding: 2rem 1rem;
+  transition: outline 0.3s ease;
+}
+
+.product__body img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.product__body p {
+  font-size: 1.2rem;
+  color: var(--font-color);
+  margin-bottom: 0;
+}
+
+.pro__ratings i {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+}
+
+.pro__btn {
+  width: 70%;
+  padding: 8px 16px;
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+/* veggie food styling start here */
+
+.veggie__food {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  background-image: url(./resources/getstarted-img.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 90px 0;
+  opacity: 0.8;
+}
+
+.veggie__food h3 {
+  text-align: center;
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.veggie__btn {
+  width: 150px;
+}
+
+.veggie__btn i {
+  margin-left: 0.8rem;
+}
+
+/* footer styling start here */
+
+.foot__main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 20% 20% 30%;
+}
+
+.foot__col1,
+.foot__col2,
+.foot__col4 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 20px;
+}
+
+.foot__col1 span i {
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.foot__col1 h4,
+.foot__col2 h4,
+.foot__col4 h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--font-color);
+}
+
+.foot__col1 h4 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.foot__col2 ul li,
+.foot__col1 p,
+.foot__col4 p {
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.foot__col4 input {
+  width: 70%;
+  padding: 10px 15px;
+  font-size: 0.8rem;
+  background-color: var(--sec-btn-color);
+  border: none;
+}
+
+.foot__form button {
+  padding: 10px 15px;
+  font-size: 0.8rem;
+}
+
+.foot__bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: smaller;
+}
+
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* all hover styling here */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+.nav__bar li a:hover {
+  color: var(--primary-color);
+}
+
+.hero__left__spnsor img:hover,
+.foot__col1 span i:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.feture__grid .image img:hover,
+.product__body img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.image__des button:hover {
+  background-color: var(--btn-hover-color);
+  color: var(--color-white);
+}
+
+.product__body:hover {
+  outline: 1px solid var(--primary-color);
+}
+
+.pro__btn:hover {
+  color: var(--color-white);
+}
+
+.foot__col2 ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
