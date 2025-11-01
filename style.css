@@ -13,9 +13,10 @@
   --primary-color: #06c176;
   --secondary-color: #f3fcf7;
   --color-white: #ffffff;
-  --font-color: #1d1d1fbf;
+  --font-color: #1d1d1f;
   --font-black: black;
   --border-color: #b6b0b0;
+  --benefit-bg-color: #e0f7ef;
   --font-family: inter, sans-serif;
   --font-size: 16px;
 }
@@ -25,7 +26,6 @@
 body {
   font-family: var(--font-family);
   font-size: var(--font-size);
-
   background-color: var(--secondary-color);
   color: var(--font-color);
   display: flex;
@@ -43,6 +43,7 @@ button {
   font-size: 0.8rem;
   transition: background-color 0.3s ease;
 }
+
 /* main section styling here */
 main {
   flex: 1;
@@ -59,6 +60,10 @@ header {
   justify-content: space-between;
   align-items: center;
   color: var(--primary-color);
+}
+.hero__btn span {
+  margin-left: 10px;
+  font-weight: 600;
 }
 
 /* nav bar styling from here */
@@ -93,6 +98,7 @@ header {
 }
 .hero__left p {
   margin-bottom: 30px;
+  line-height: 1.5rem;
 }
 
 .hero__left h2 {
@@ -219,4 +225,84 @@ header {
   font-size: 0.9rem;
   color: var(--font-color);
   margin-top: 5px;
+}
+
+/* our benefit section styling here + our stars (some of)*/
+
+.our__benefit,
+.our__stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.benefit__left,
+.stars__right {
+  background-color: var(--benefit-bg-color);
+  width: 50%;
+  padding: 32px;
+}
+
+.benefit__left img,
+.stars__right img {
+  width: 100%;
+  height: 100vh;
+}
+
+.benefit__right p,
+.stars__left p {
+  font-size: 0.8rem;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.benefit__right h2,
+.stars__left h2 {
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+.benefit__right li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: var(--font-color);
+}
+.benefit__right i {
+  color: var(--primary-color);
+  font-style: 800;
+  margin-right: 10px;
+}
+
+/* our stars styling start here */
+
+.countdown {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.count__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.count__fig {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.count__body p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--font-color);
 }
